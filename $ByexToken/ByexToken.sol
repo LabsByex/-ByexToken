@@ -27,16 +27,16 @@ contract ByexToken is ERC20 {
     uint256 private constant TOTAL_SUPPLY = 5e8 * 1e18; 
 	
 	// Vesting schedule start time
-    uint256 public vestingStartTime; 
+    uint256 public immutable vestingStartTime; 
 	
 	// Vesting period duration (30 days)
     uint256 public constant VESTING_DELAY = 30 days;
 
-    address public earlyInvestors = 0x08a7E215d465a70A02047178baC9E8B10dDaF3D2;
-    address public marketPromotion = 0x247E01cD4eA233FaD80BA88bF0aF0Ae6A36eD099;
-    address public ecosystemDevelopment = 0x78495083D921D18bB12e9E66A9C7ccE8f64fd202;
-    address public teamIncentives = 0x2C129f32515E3d24DaBC6A51356e15fAaCa9867b;
-    address public protectionFund = 0x3131A844A3E185F541c63A68675A42F849c0aA2F;
+    address public constant earlyInvestors = 0x08a7E215d465a70A02047178baC9E8B10dDaF3D2;
+    address public constant marketPromotion = 0x247E01cD4eA233FaD80BA88bF0aF0Ae6A36eD099;
+    address public constant ecosystemDevelopment = 0x78495083D921D18bB12e9E66A9C7ccE8f64fd202;
+    address public constant teamIncentives = 0x2C129f32515E3d24DaBC6A51356e15fAaCa9867b;
+    address public constant protectionFund = 0x3131A844A3E185F541c63A68675A42F849c0aA2F;
 
 	// Vesting schedule structure
     struct VestingSchedule {
